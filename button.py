@@ -4,12 +4,13 @@ import RPi.GPIO as GPIO
 
 GPIO.setmode(GPIO.BCM)
 GPIO.setup(12, GPIO.IN)
+GPIO.setup(22, GPIO.OUTPUT)
 
+on = False
 try:
 	while True:
-		sw = GPIO.input(12)
-		if sw:
-			print 'Turned on'
+		on = GPIO.input(12)
+		GPIO.output(22, on)
 except KeyboardInterrupt:
 	print 'Cleaning up and exiting'
 	GPIO.cleanup()
