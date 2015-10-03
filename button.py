@@ -7,7 +7,7 @@ GPIO.setup(12, GPIO.IN)
 
 try:
 	while True:
-		sw = GPIO.input(22, True)
+		sw = GPIO.input(12)
 		if sw:
 			print 'Turned on'
 except KeyboardInterrupt:
