@@ -11,7 +11,7 @@ def do_print(pages):
     c = canvas.Canvas(file_name)
     for i in range(pages):
         for col in range(1, 3):
-            for j in range(12, 18):
+            for j in range(3, 18):
                 c.setFont("Helvetica", 28)
                 c.drawString(70 * col + ((col - 1) * 190), j * 40,
                              '%s + %s =' % (random.randint(1000, 9999), random.randint(1000, 9999)))        
